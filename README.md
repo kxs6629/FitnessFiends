@@ -10,3 +10,6 @@ There is a lot of tech that I haven't used since college in this one. So it shou
 * [Next.JS](https://nextjs.org/docs/app/getting-started) :  Front End
     - [Tailwind](https://tailwindui.com/?ref=top) 
     - [TypeScript](https://www.typescriptlang.org/docs/)
+
+## Resources
+* [Figma Prototype](https://www.figma.com/design/Zowu8SyPvJK3cbuAnDg2Yf/FitnessFiends?node-id=0-1&p=f&t=rGL1efnYLrRpeQ4b-0)
