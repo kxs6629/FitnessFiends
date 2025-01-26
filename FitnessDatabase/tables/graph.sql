@@ -7,6 +7,8 @@ GO
 CREATE TABLE fitnessfiends.graph
 (
     graphId INT NOT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, -- primary key column
+    toggleable INT NOT NULL,
+    ColNum INT NOT NULL
     -- specify more columns here
 );
 GO
