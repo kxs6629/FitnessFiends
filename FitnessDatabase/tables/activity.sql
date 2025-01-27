@@ -7,6 +7,16 @@ GO
 CREATE TABLE fitnessfiends.activity
 (
     activityId INT NOT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, -- primary key column
-    -- specify more columns here
+    activityDate TIMESTAMP NOT NULL,
+    activityName VARCHAR (50) NOT NULL,
+    weight INT,
+    reps INT,
+    activitySet INT,
+    duration TIME,
+    elevation INT,
+    quantity INT,
+    notes VARCHAR(250),
+    activityType_id INT REFERENCES activityType,
+    user_id INT REFERENCES users
 );
 GO
