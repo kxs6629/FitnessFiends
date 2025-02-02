@@ -1,15 +1,12 @@
-/-- Create a new table called 'users' in schema 'fitnessfiends'
+-- Create a new table called 'users' in schema 'fitnessfiends'
 -- Drop the table if it already exists
-IF OBJECT_ID('fitnessfiends.users', 'U') IS NOT NULL
-DROP TABLE fitnessfiends.users
-GO
+DROP TABLE IF EXISTS users;
 -- Create the table in the specified schema
-CREATE TABLE fitnessfiends.users
+CREATE TABLE users
 (
-    usersId INT NOT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, -- primary key column
-    username VARCHAR(50) NOT NULL UNIQUE,
-    email VARCHAR (50) NOT NULL UNIQUE,
-    password VARCHAR(50) NOT NULL
+    usersId SERIAL PRIMARY KEY, -- primary key column
+    username VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR (50) UNIQUE NOT NULL,
+    password VARCHAR(50) UNIQUE NOT NULL
     -- specify more columns here
 );
-GO

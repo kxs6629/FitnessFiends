@@ -1,13 +1,12 @@
-/-- Create a new table called 'graph' in schema 'fitnessfiends'
+-- Create a new table called 'graph' in schema 'fitnessfiends'
 -- Drop the table if it already exists
-IF OBJECT_ID('fitnessfiends.graph', 'U') IS NOT NULL
-DROP TABLE fitnessfiends.graph
-GO
+DROP TABLE IF EXISTS graph;
 -- Create the table in the specified schema
-CREATE TABLE fitnessfiends.graph
+
+CREATE TABLE graph
 (
-    graphId INT NOT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, -- primary key column
+    graphId SERIAL PRIMARY KEY, -- primary key column
+    graphName VARCHAR(50) NOT NULL,
     toggleable INT NOT NULL,
     ColNum INT NOT NULL
 );
-GO
