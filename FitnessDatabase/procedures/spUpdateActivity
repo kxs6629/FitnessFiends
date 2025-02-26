@@ -1,0 +1,9 @@
+CREATE OR REPLACE PROCEDURE spUpdateActivity()
+LANGUAGE SQL
+BEGIN ATOMIC
+UPDATE activity
+SET 
+valHere = newValHere
+WHERE
+activityIdent = idHere
+END
